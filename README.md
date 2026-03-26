@@ -1,8 +1,44 @@
-# Nextflow Troubleshooting Microcredential (Single Workstation)
+<h1 align="center">Why Your Pipeline Is Slow or Stalled: Troubleshooting CPU, Memory, and I/O Bottlenecks on a Single Workstation</h1>
 
-**Asad Prodhan**  
-The University of Western Australia (UWA)  
-Perth, Western Australia, Australia  
+<h3 align="center">M. Asaduzzaman Prodhan<sup>*</sup> </h3>
+
+<div align="center"><b> School of Biological Sciences, The University of Western Australia </b></div>
+
+<div align="center"><b> 35 Stirling Highway, Perth, WA 6009, Australia. <sup>*</sup>Correspondence: prodhan82@gmail.com </b></div>
+
+<br />
+
+<p align="center">
+  <a href="https://github.com/asadprodhan/Microbiome_Metagenomic_Analysis_Roadmap_From_Reads_to_Abundance_Table#GPL-3.0-1-ov-file"><img src="https://img.shields.io/badge/License-GPL%203.0-yellow.svg" alt="License GPL 3.0" style="display: inline-block;"></a>
+  <a href="https://orcid.org/0000-0002-1320-3486"><img src="https://img.shields.io/badge/ORCID-green?style=flat-square&logo=ORCID&logoColor=white" alt="ORCID" style="display: inline-block;"></a>
+</p>
+
+<br />
+
+---
+
+## **CONTENT**
+
+- [Learning Objective](#learning-objective)
+- [Step 1 — Check pipeline status](#step-1--check-pipeline-status)
+- [Step 2 — Diagnose system resources](#step-2--diagnose-system-resources)
+  - [uptime](#uptime)
+  - [free -h](#free--h)
+  - [vmstat 2 5](#vmstat-2-5)
+- [System Bottleneck Flow](#system-bottleneck-flow)
+- [Step 3 — Identify heavy pipelines](#step-3--identify-heavy-pipelines)
+- [Step 4 — Reduce contention](#step-4--reduce-contention)
+- [Step 5 — Confirm recovery](#step-5--confirm-recovery)
+- [Step 6 — Check active jobs](#step-6--check-active-jobs)
+- [Step 7 — Monitor progress](#step-7--monitor-progress)
+- [Step 8 — Check task results](#step-8--check-task-results)
+- [Step 9 — Check logs](#step-9--check-logs)
+- [Step 10 — Resume safely](#step-10--resume-safely)
+- [Key Learning Points](#key-learning-points)
+- [Recommended Settings](#recommended-settings)
+- [Teaching Insight](#teaching-insight)
+  
+<br />
 
 ---
 

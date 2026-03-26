@@ -57,10 +57,12 @@ ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head
 
 **Scenario 1 — Active execution (healthy)**
 
-PID     COMMAND           %CPU   %MEM
-70562   blast_formatter   26.8   49.5
-70591   blast_formatter   13.4   17.3
-69366   java               0.4    0.0
+
+| PID   | COMMAND           | %CPU | %MEM |
+|------|------------------|------|------|
+| 70562 | blast_formatter | 26.8 | 49.5 |
+| 70591 | blast_formatter | 13.4 | 17.3 |
+| 69366 | java            | 0.4  | 0.0  |
 
 
 **Interpretation**
@@ -69,11 +71,15 @@ PID     COMMAND           %CPU   %MEM
 - Very high memory (49.5%, 17.3%) → `blast_formatter` is memory-intensive process
 - java → Nextflow controller (low CPU, expected) 
 
+
 **Scenario 2 — Idle or finished**
 
-PID     COMMAND            %CPU   %MEM
-69366   java                 0.3   0.1
-2705    gnome-shell          0.1   0.0
+
+| PID   | COMMAND       | %CPU | %MEM |
+|------|--------------|------|------|
+| 69366 | java         | 0.3  | 0.1  |
+| 2705  | gnome-shell  | 0.1  | 0.0  |
+
 
 **Interpretation**
 
@@ -83,9 +89,12 @@ PID     COMMAND            %CPU   %MEM
 
 **Scenario 3 — Resource bottleneck**
 
-PID     COMMAND            %CPU   %MEM
-70562   blastn               0.5   10.2
-70591   blastn               0.3   10.1
+
+| PID   | COMMAND | %CPU | %MEM |
+|------|--------|------|------|
+| 70562 | blastn | 0.5  | 10.2 |
+| 70591 | blastn | 0.3  | 10.1 |
+
 
 **Interpretation**
 

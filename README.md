@@ -247,6 +247,8 @@ find work -name ".exitcode" -exec sh -c 'for f; do printf "%s\n" "$(cat "$f")"; 
 
 ## Step 9 — Check logs
 
+An example for checking Nextflow pipeline:
+
 ```bash
 tail -f .nextflow.log
 ```
@@ -257,7 +259,7 @@ tail -f .nextflow.log
 - `id` → Unique identifier for the task within the workflow  
 - `name` → Process name and input label (e.g. `blastn (sample1)`)  
 - `status` → Current state (`NEW`, `RUNNING`, `COMPLETED`, etc.)  
-- `exit` → Exit code after completion (`0` = success; non-zero = failure/interruption)  
+- `exit` → Exit code after completion (`0` = success; non-zero = failure/interruption; `-` = empty- the task is currently pending or running)  
 - `error` → Error message if the task failed (empty if none)  
 - `workDir` → Directory containing task scripts, logs, and outputs  
 

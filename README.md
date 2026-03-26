@@ -210,8 +210,6 @@ vmstat 2 5
 - `wa` (I/O wait) → 6%, then 0%  
   - Very low → no I/O bottleneck  
 
-**Conclusion**
-
 - System is idle and healthy: no CPU contention, no memory pressure, and no disk I/O bottleneck
 
 ---
